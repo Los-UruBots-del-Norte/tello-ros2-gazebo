@@ -72,6 +72,7 @@ set(DRIVER_NODE_DEPS
   geometry_msgs
   OpenCV
   rclcpp
+  rclcpp_components
   ros2_shared
   sensor_msgs
   std_msgs
@@ -126,6 +127,7 @@ set(JOY_NODE_DEPS
   class_loader
   geometry_msgs
   rclcpp
+  rclcpp_components
   sensor_msgs
   tello_msgs)
 

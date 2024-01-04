@@ -27,6 +27,9 @@
     cd ..
     source /opt/ros/galactic/setup.bash
     colcon build
+
+#### Error on ROS2 Humble
+    sudo chmod +x tello-ros2-gazebo/tello_ros/tello_description/src/replace.py
     
 #### Run a teleop simulation
 

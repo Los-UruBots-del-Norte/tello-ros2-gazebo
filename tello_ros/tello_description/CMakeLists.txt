@@ -23,6 +23,7 @@ foreach (INDEX RANGE 0 8)
   message(STATUS "creating rules for ${URDF_FILE}")
   add_custom_command(
     OUTPUT ${URDF_FILE}
+    ## set permission to bypass the error compiling
     COMMAND ${PYTHON_EXECUTABLE} "${CMAKE_CURRENT_SOURCE_DIR}/src/replace.py"
     "${CMAKE_CURRENT_SOURCE_DIR}/urdf/tello.xml" "suffix=${SUFFIX}" "topic_ns=${TOPIC_NS}" ">" "${URDF_FILE}"
     DEPENDS urdf/tello.xml
