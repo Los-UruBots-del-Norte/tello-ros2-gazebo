@@ -20,57 +20,11 @@
     <!-- Base link -->
     <link name="base_link${suffix}">
         <visual>
-            <origin xyz="0 0 0.01"/>
+            <origin xyz="0 0 0.005" rpy="0 0 0"/>
             <geometry>
-                <box size="0.07 0.02 0.02"/>
+                <mesh filename="package://tello_description/meshes/tello.dae" scale="0.01 0.01 0.01" />
             </geometry>
-            <material name="white"/>
         </visual>
-        <visual>
-            <origin xyz="0 0 -0.01"/>
-            <geometry>
-                <box size="0.07 0.02 0.02"/>
-            </geometry>
-            <material name="gray"/>
-        </visual>
-        <visual>
-            <origin xyz="0.05 -0.05 0"/>
-            <geometry>
-                <cylinder length="0.01" radius="0.045"/>
-            </geometry>
-            <material name="gray"/>
-        </visual>
-        <visual>
-            <origin xyz="-0.05 0.05 0"/>
-            <geometry>
-                <cylinder length="0.01" radius="0.045"/>
-            </geometry>
-            <material name="gray"/>
-        </visual>
-        <visual>
-            <origin xyz="-0.05 -0.05 0"/>
-            <geometry>
-                <cylinder length="0.01" radius="0.045"/>
-            </geometry>
-            <material name="gray"/>
-        </visual>
-        <visual>
-            <origin xyz="0.05 0.05 0"/>
-            <geometry>
-                <cylinder length="0.01" radius="0.045"/>
-            </geometry>
-            <material name="gray"/>
-        </visual>
-        <inertial>
-            <mass value="0.1"/>
-            <!-- Tensor for solid cuboid 18cm x 18cm x 5cm high -->
-            <inertia ixx="0.000290833" ixy="0" ixz="0" iyy="0.00054" iyz="0" izz="0.000290833"/>
-        </inertial>
-        <collision name="collision">
-            <geometry>
-                <box size="0.18 0.18 0.05"/>
-            </geometry>
-        </collision>
     </link>
 
     <!-- Camera link -->

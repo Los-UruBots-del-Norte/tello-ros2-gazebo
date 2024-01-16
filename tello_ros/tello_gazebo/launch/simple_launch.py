@@ -6,7 +6,15 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import ExecuteProcess
+from ament_index_python import get_package_prefix
 
+# Add tello_description/share to GAZEBO_MODEL_PATH
+pkg_share_path = os.pathsep + os.path.join(get_package_prefix("tello_description"), 'share')
+print("pkg share", pkg_share_path)
+if 'GAZEBO_MODEL_PATH' in os.environ:
+    os.environ['GAZEBO_MODEL_PATH'] += pkg_share_path
+else:
+    os.environ['GAZEBO_MODEL_PATH'] =  pkg_share_path
 
 def generate_launch_description():
     ns = 'drone1'

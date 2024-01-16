@@ -44,6 +44,11 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 
+install(
+  DIRECTORY meshes
+  DESTINATION share/${PROJECT_NAME}
+)
+
 #=============
 # Run ament macros
 #=============
