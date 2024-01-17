@@ -25,6 +25,16 @@
                 <mesh filename="package://tello_description/meshes/tello.dae" scale="0.01 0.01 0.01" />
             </geometry>
         </visual>
+        <inertial>
+            <mass value="0.1"/>
+            <!-- Tensor for solid cuboid 18cm x 18cm x 5cm high -->
+            <inertia ixx="0.000290833" ixy="0" ixz="0" iyy="0.00054" iyz="0" izz="0.000290833"/>
+        </inertial>
+        <collision name="collision">
+            <geometry>
+                <box size="0.18 0.18 0.05"/>
+            </geometry>
+        </collision>
     </link>
 
     <!-- Camera link -->
