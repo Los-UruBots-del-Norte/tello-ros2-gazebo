@@ -1,0 +1,10 @@
+services:
+  tello-gazebo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
+    command: ros2 launch tello_gazebo simple_launch.py
