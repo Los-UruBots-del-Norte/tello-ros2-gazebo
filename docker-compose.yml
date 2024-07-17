@@ -6,5 +6,5 @@ services:
     env_file:
       - .env
     ports:
-      - "8080:8080"
-    command: ros2 launch tello_gazebo simple_launch.py
+      - 6080:80
+      - 5900:5900
