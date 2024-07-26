@@ -2,7 +2,16 @@ FROM osrf/ros:humble-desktop-full
 # Install dependencies
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install -y git wget ros-humble-cv-bridge ros-humble-camera-calibration-parsers 
+RUN apt-get install -y git wget \
+ros-humble-cv-bridge \
+ros-humble-camera-calibration-parsers \
+ros-humble-rviz2 \
+ros-humble-rviz-common \
+ros-humble-rviz-default-plugins \
+ros-humble-rviz-visual-tools \
+ros-humble-rviz-rendering \
+ros-humble-nav2-rviz-plugins
+
 # libignition-rendering3
 RUN apt-get install -y libasio-dev
 RUN apt-get install -y python3-pip
